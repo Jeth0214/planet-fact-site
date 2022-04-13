@@ -1,0 +1,13 @@
+@use '../utilities/' as * ;
+
+
+.links {
+
+    .link {
+        padding: rem(12) rem(28);
+        span {
+            margin-right: rem(28);
+            color: has( var(--clr-white / .5));
+        }
+    }
+}

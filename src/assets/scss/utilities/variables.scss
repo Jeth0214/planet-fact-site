@@ -1,0 +1,35 @@
+:root {
+    /* COLORS */
+    // Primary
+    --clr-mercury: 194 48% 49%;
+    --clr-venus: 33 82% 61%;
+    --clr-earth: 263 67% 51%;
+    --clr-mars: 10 63% 51%;
+    --clr-jupiter: 2 68% 53%;
+    --clr-saturn: 17 73% 46%;
+    --clr-uranus: 169 73% 44%;
+    --clr-neptune: 222 87% 56%;
+
+    // secondary
+    --clr-white: 0 0% 100%;
+    --clr-dark: 240 67% 8%;
+    --clr-dark-gray: 240 17% 26%;
+    --clr-ash-gray: 240 6% 54%;
+
+
+
+    /*  Typography */
+    
+    // font-family
+    --ff-antonio : 'Antonio', sans-serif;
+    --ff-spartan: 'League Spartan', sans-serif;
+
+    //font-size
+    --fs-900: rem(80); 
+    --fs-800: rem(40);
+    --fs-400: rem(14);
+    --fs-300: rem(12);
+    --fs-200: rem(11)
+    
+
+}

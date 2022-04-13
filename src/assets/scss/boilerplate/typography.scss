@@ -1,0 +1,24 @@
+@use '../utilities/' as *;
+
+// font family
+.ff-antonio { font-family: var(--ff-antonio); }
+.ff-spartan { font-family: var(--ff-spartan); }
+
+//font sizes
+.fs-900 { font-size: var(--fs-900); line-height: 103px };
+.fs-800 { font-size: var(--fs-800); line-height: 52px };
+.fs-400 { font-size: var(--fs-400); };
+.fs-300 { font-size: var(--fs-300); };
+.fs-200 { font-size: var(--fs-200); };
+
+
+//text transform
+.uppercase { text-transform: uppercase; }
+
+//font weight
+.fw-bold { font-weight: bold; }
+
+//letter spacing
+.ls-1 { letter-spacing: -1.5px; }
+.ls-2 { letter-spacing: 1px; }
+.ls-3 { letter-spacing: 2.6px; }

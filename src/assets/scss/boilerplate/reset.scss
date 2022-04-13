@@ -1,0 +1,69 @@
+@use '../utilities/' as *;
+
+// Box sizing 
+*,
+*::before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* reset margins  */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin: 0
+}
+
+/*  set up the body  */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    //background-color: hsl(var(--clr-dark));
+    color: hsl(var(--clr-white));
+    background: hsl(var(--clr-dark)) url(../../images/background-stars.svg);
+}
+
+/* images */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* list  */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+/* links */ 
+a,
+a:visited {
+    text-decoration: none;
+}
+
+/* button */
+button  {
+    font: inherit;
+}
+
+/* remove animations for people who turned it off*/
+@media (prefers-reduced-motion: reduce) {
+    *, 
+    *::after, 
+    *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    } 
+}
+
