@@ -2,6 +2,13 @@
 
 .text-white { color: hsl(var(--clr-white)) };
 .text-dark { color: hsl(var(--clr-dark)) };
-.text-light { color: hsl(var(--clr-white / .5)) };
+.text-light { color: hsl(var(--clr-white / .75)) };
 .text-dark-gray { color: hsl(var(--clr-dark-gray)) };
 .text-ash-gray { color: hsl(var(--clr-ash-gray)) };
+
+
+.bg-white { background-color: hsl(var(--clr-white)) };
+.bg-dark { background-color: hsl(var(--clr-dark)) };
+.bg-light { background-color: hsl(var(--clr-white / .5)) };
+.bg-dark-gray { background-color: hsl(var(--clr-dark-gray)) };
+.bg-ash-gray { background-color: hsl(var(--clr-ash-gray)) };

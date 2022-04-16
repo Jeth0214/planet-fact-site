@@ -25,7 +25,7 @@ picture {
 body {
     line-height: 1.5;
     min-height: 100vh;
-    //background-color: hsl(var(--clr-dark));
+    font-size: var(--fs-400);
     color: hsl(var(--clr-white));
     background: hsl(var(--clr-dark)) url(../../images/background-stars.svg);
 }

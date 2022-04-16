@@ -1,0 +1,166 @@
+@use '../utilities/' as *;
+
+.header {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid hsl(var(--clr-white) / 0.2);
+
+    //nav bar
+    .nav {
+        position: relative;
+        line-height: 1.25;
+        @include breakpoint-up('large') {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav__brand {
+            border-bottom: 1px solid hsl(var(--clr-white) / 0.2);
+            padding: rem(16) rem(24);
+            @include breakpoint-up('medium') {
+                text-align: center;
+                border-bottom: 0;
+            }
+        }
+
+        // Hambuger Toggle
+        .nav__burger {
+            cursor: pointer;
+            position: absolute;
+            right: rem(24);
+            top: rem(36);
+            width: 24px;
+            height: 17px;
+            @include breakpoint-up('medium') {
+                display: none;
+            }
+            .nav__burger-lines {
+                position: relative;
+                .nav__burger-line {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 100%;
+                    display: block;
+                    height: 3px;
+                    transition: transform 0.5s, width 0.5s;
+                }
+                .nav__burger-line--1 {
+                    transform: translate(-50%, -7px);
+                }
+                
+                .nav__burger-line--2 {
+                    width: 100%;
+                }
+                
+                .nav__burger-line--3 {
+                    transform: translate(-50%, 5px);
+                }
+            }
+        }
+
+        //style the burger menu if the menu is open
+        .nav__open {
+            .nav__burger-line {
+                background-color: hsl(var(--clr-white) / 0.25);
+            }
+        }
+
+        
+        .nav__links {
+            visibility: hidden;
+            height: 0;
+            position: absolute;
+            margin-top: rem(20);
+            padding-inline: rem(24); 
+            @include breakpoint-up('medium') {
+                visibility: visible;
+                height: auto;
+                position: relative;
+                flex-basis: rem(665);
+                display: flex;
+                justify-content: space-between;
+                margin-top: 0;
+            }
+            .nav__item {
+                position: relative;
+                padding: rem(24) 0;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                color:  hsl(var(--clr-white) / 0.75);
+                flex: 1;
+                @include breakpoint-up('medium') {
+                    display: grid;
+                    place-items: center;
+                }
+                &:hover  {
+                    color:  hsl(var(--clr-white));
+                    &::before {
+                        content: '';
+                        height: 4px;
+                        width: 100%;
+                        background-color: var(--planet-theme, hsl(var(--clr-dark-gray)));
+                        position: absolute;
+                        top: -1px;
+                    }
+                }
+                .planet__indicator {
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    margin-right:  rem(25);
+                    background-color: var(--planet-theme, hsl(var(--clr-dark-gray)));
+                    @include breakpoint-up('medium') {
+                        display: none;
+                    }
+                }
+                .arrow-right {
+                    position: absolute;
+                    right: 0;
+                    @include breakpoint-up('medium') {
+                        display: none !important;
+                    }
+                }
+            }
+            .nav__item--active {
+                &::before {
+                    content: '';
+                    height: 4px;
+                    width: 100%;
+                    background-color: var(--planet-theme, hsl(var(--clr-dark-gray)));
+                    position: absolute;
+                    top: -1px;
+                }
+            }
+        }
+
+        //open menu 
+        .nav__links--visible {
+            visibility: visible;
+            height: auto;
+            position: relative;
+            width: 100%;
+            animation: openNav .5s linear;  
+        }
+
+        .nav__links > *:where(:not(:first-child)) {
+            border-top: 1px solid hsl(var(--clr-white) / 0.2);
+            @include breakpoint-up('medium') {
+                border: none;
+            }
+        }
+    }
+}
+
+/* The animation for opening the nav menu */
+@keyframes openNav {
+    from { opacity: 0; width: 0%;}
+    to {opacity: 1; width: 100%;}
+   }
+ 

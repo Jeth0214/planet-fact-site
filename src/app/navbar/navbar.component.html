@@ -1,0 +1,32 @@
+<header class="header bg-dark">
+    <nav class="nav">
+        <div class="nav__brand">
+            <a href="#" class=" ff-antonio uppercase text-white fs-600"> The planets </a>
+        </div>
+        
+        <a  class="nav__burger " [class.nav__open]="isOpen" aria-label="open navigation" (click)="toggleMenu()">
+            <div class="nav__burger-lines">
+                <span class="nav__burger-line nav__burger-line--1 bg-white" ></span>
+                <span class="nav__burger-line nav__burger-line--2 bg-white"></span>
+                <span class="nav__burger-line nav__burger-line--3 bg-white"></span>
+            </div>
+        </a>
+
+        <ul class="nav__links" [class.nav__links--visible]="isOpen">
+            <li class="nav__item ff-spartan uppercase fw-700 ls-3 text-light" 
+                *ngFor="let planet of planets" 
+                [style.--planet-theme]="planet.theme" 
+                [routerLink]="['planet', planet.name]" routerLinkActive="nav__item--active">
+
+                <span class="planet__indicator" aria-label="planet indicator" ></span> 
+
+                <a  class="nav__link"> 
+                    {{planet.name}}
+                </a>
+                
+                <span class="arrow-right"><i class="fa-solid fa-chevron-right"></i></span>
+            </li>
+        </ul> 
+    </nav>
+</header>
+
