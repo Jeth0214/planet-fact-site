@@ -2,7 +2,7 @@
 
 .text-white { color: hsl(var(--clr-white)) };
 .text-dark { color: hsl(var(--clr-dark)) };
-.text-light { color: hsl(var(--clr-white / .75)) };
+.text-light { color: hsl(var(--clr-white) / .5) };
 .text-dark-gray { color: hsl(var(--clr-dark-gray)) };
 .text-ash-gray { color: hsl(var(--clr-ash-gray)) };
 

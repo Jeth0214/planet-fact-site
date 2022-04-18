@@ -1,1 +1,45 @@
-<p>planets works!</p>
+<section class="planet">
+    <div class="d-grid d-grid--planet" [style.--planet-theme]="planet?.theme">
+        <!-- buttons -->
+        <div class="planet__details-btns" >
+            <div class="container d-flex btns">
+                <button class="btn btn--active uppercase fs-200  fw-700 ff-spartan ls-4 bg-dark">OverView</button>
+                <button class="btn uppercase fs-200 fw-700  ff-spartan ls-4 bg-dark">Structure</button>
+                <button class="btn uppercase fs-200 fw-700 ff-spartan ls-4 bg-dark">Surface</button>
+            </div>
+        </div>
+    
+        <!-- image -->
+        <div class="planet__image d-grid container">
+            <img [src]="planet?.images?.planet" [alt]="planet?.name">
+        </div>
+    
+        <!-- Planet Details -->
+        <div class="planet__details container flow">
+            <h1 class="ff-antonio fw-400  uppercase planet__name">{{ planet?.name }}</h1>
+            <p class="fs-400 ff-spartan planet__content">{{planet?.overview?.content}}</p>
+    
+            <p class="planet__source  text-dark-gray">Source: <a class="text-light source_link" target="_blank" [href]="planet?.overview?.source">Wikipedia</a> <span><img src="../../assets/images/icon-source.svg"></span></p>
+        </div>
+    </div>
+
+    <!-- Planet Measurements -->
+    <div class="planet__measurements uppercase container d-flex">
+        <div class="planet__rotation planet__measure">
+            <p class="text-light uppercase fs-200 ff-spartan  ls-3">rotation time</p>
+            <p class="fs-800 ff-antonio planet__measure--value">{{ planet?.rotation }}</p>
+        </div>
+        <div class="planet__revolution planet__measure">
+            <p class="text-light uppercase fs-200 ff-spartan  ls-3">revolution time</p>
+            <p class="fs-800 ff-antonio planet__measure--value">{{ planet?.revolution }}</p>
+        </div>
+        <div class="planet__radius planet__measure">
+            <p class="text-light uppercase fs-200 ff-spartan  ls-3">radius</p>
+            <p class="fs-800 ff-antonio planet__measure--value">{{ planet?.radius }}</p>
+        </div>
+        <div class="planet__temperature planet__measure">
+            <p class="text-light uppercase fs-200 ff-spartan  ls-3">Average Temp.</p>
+            <p class="fs-800 ff-antonio planet__measure--value">{{ planet?.temperature }}</p>
+        </div>
+    </div>
+</section>

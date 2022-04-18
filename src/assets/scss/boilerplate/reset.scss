@@ -26,6 +26,7 @@ body {
     line-height: 1.5;
     min-height: 100vh;
     font-size: var(--fs-400);
+    font-family: var(--ff-spartan);
     color: hsl(var(--clr-white));
     background: hsl(var(--clr-dark)) url(../../images/background-stars.svg);
 }
@@ -34,7 +35,6 @@ body {
 img,
 picture {
     max-width: 100%;
-    display: block;
 }
 
 /* list  */

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { Planet } from '../planet';
+import { PlanetsService } from '../planets.service';
 
 @Component({
   selector: 'app-planets',
@@ -8,14 +10,21 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class PlanetsComponent implements OnInit {
 
-  planetName: string = '';
+  planet: Planet | undefined;
 
-  constructor( private activatedRoute: ActivatedRoute ) { }
+  constructor( private activatedRoute: ActivatedRoute, private planetService: PlanetsService ) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe( (params: ParamMap) => {
-      let name = params.get('name');
-      console.log(name);
+      let planetName = params.get('name');
+      //console.log(name);
+      this.getPlanet(planetName);
+    })
+  }
+
+  getPlanet(planetName: any){
+    this.planetService.getPlanets().subscribe( (response) => {
+      this.planet = response.filter( planet => { return planet.name.toLowerCase() == planetName.toLowerCase() })[0];
     })
   }
 
