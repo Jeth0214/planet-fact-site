@@ -19,8 +19,7 @@ export class NavbarComponent {
     this.isOpen = !this.isOpen;
   }
 
-  goToPlanet(name: string){
-    this.toggleMenu();
-    this.router.navigate(['/planet', name])
+  hideToggle(){
+    this.isOpen = false;
   }
 }

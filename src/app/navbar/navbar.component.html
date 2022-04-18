@@ -16,7 +16,9 @@
             <li class="nav__item ff-spartan uppercase fw-700 ls-3 text-light" 
                 *ngFor="let planet of planets" 
                 [style.--planet-theme]="planet.theme" 
-                [routerLink]="['planet', planet.name]" routerLinkActive="nav__item--active">
+                [routerLink]="['planet', planet.name]" 
+                routerLinkActive="nav__item--active"
+                (click)="hideToggle()">
 
                 <span class="planet__indicator" aria-label="planet indicator" ></span> 
 

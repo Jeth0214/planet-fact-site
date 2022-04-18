@@ -15,6 +15,7 @@ export interface Planet {
     };
     rotation: string;
     radius: string;
+    revolution: string;
     temperature: string;
     images: {
       planet: string;
