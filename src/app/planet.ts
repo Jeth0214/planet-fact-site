@@ -23,3 +23,11 @@ export interface Planet {
       geology: string
     }
 }
+
+export interface PlanetDetails {
+  details : {
+    content: string,
+    source: string
+  }
+  image : string
+}

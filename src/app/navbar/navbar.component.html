@@ -15,6 +15,7 @@
         <ul class="nav__links" [class.nav__links--visible]="isOpen">
             <li class="nav__item ff-spartan uppercase fw-700 ls-3 text-light" 
                 *ngFor="let planet of planets" 
+                [state]="planet"
                 [style.--planet-theme]="planet.theme" 
                 [routerLink]="['planet', planet.name]" 
                 routerLinkActive="nav__item--active"
