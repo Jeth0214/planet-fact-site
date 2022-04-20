@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PlanetsComponent } from './planets/planets.component'
+import { PlanetsComponent } from './planets/planets.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
