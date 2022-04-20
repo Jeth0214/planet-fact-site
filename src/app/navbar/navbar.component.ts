@@ -1,5 +1,4 @@
-import { Component, ElementRef, Input, OnInit} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input} from '@angular/core';
 import { Planet } from '../planet';
 
 @Component({
@@ -12,7 +11,7 @@ export class NavbarComponent {
   @Input() planets: Planet[] = [];
   isOpen: boolean = false
 
-  constructor( private router: Router ) { 
+  constructor( ) { 
   }
 
   toggleMenu() {
