@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Planet} from '../planet';
 import { PlanetsService } from '../planets.service';
 
@@ -15,7 +15,9 @@ export class PlanetsComponent implements OnInit {
   isSelected: string = '';
   showGeologyImage: boolean = false;
 
-  constructor( private activatedRoute: ActivatedRoute, private planetService: PlanetsService) { }
+  constructor( private activatedRoute: ActivatedRoute, 
+                private planetService: PlanetsService,
+                private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe( (params: ParamMap) => {
@@ -29,9 +31,12 @@ export class PlanetsComponent implements OnInit {
 
   getPlanet(planetName: any){
     this.planetService.getPlanets().subscribe( (response) => {
-      this.planet = response.filter( planet => { return planet.name.toLowerCase() == planetName.toLowerCase() })[0];
+      this.planet = response.filter( planet => { return planet.name.toLowerCase() === planetName.toLowerCase() })[0];
+     // console.log(this.planet);
       if(this.planet) {
         this.showDetails('overview')
+      }else {
+        this.router.navigate(['/PlanetNotFound']);
       }
       })
   }

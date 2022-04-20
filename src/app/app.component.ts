@@ -8,7 +8,7 @@ import { PlanetsService } from './planets.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  title = 'planet-fact-site';
+  title = 'Planet Fact Site';
   planets: Planet[] = [];
 
   constructor (private planetService: PlanetsService ) {
@@ -17,9 +17,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(){
     this.planetService.getPlanets().subscribe( response => {
-      //console.log(response);
       this.planets = response;
-      console.log(this.planets);
     })
   }
 }
