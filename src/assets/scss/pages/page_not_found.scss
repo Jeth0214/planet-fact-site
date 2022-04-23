@@ -1,0 +1,7 @@
+.page__not-found {
+    min-height: 100vh;
+    place-items: center;
+    h1 {
+        font-size: clamp(2.5rem, 5vw, 5rem);
+    }
+}
