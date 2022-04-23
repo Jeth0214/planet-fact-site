@@ -28,7 +28,8 @@ body {
     font-size: var(--fs-400);
     font-family: var(--ff-spartan);
     color: hsl(var(--clr-white));
-    background: hsl(var(--clr-dark)) url(../../images/background-stars.svg);
+    background: url(../../images/background-stars.svg) no-repeat center;
+    background-color: hsl(var(--clr-dark));
 }
 
 /* images */

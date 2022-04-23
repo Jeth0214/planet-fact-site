@@ -4,7 +4,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PlanetsComponent } from './planets/planets.component';
 
 const routes: Routes = [ 
-  { path:'' , redirectTo: 'planet/Mercury', pathMatch: 'full'},
+  { path:'' , redirectTo: 'planet/Earth', pathMatch: 'full'},
   { path:'planet/:name' , component: PlanetsComponent},
   { path:'PlanetNotFound' , component: PageNotFoundComponent},
   { path:'**' , component: PageNotFoundComponent}
