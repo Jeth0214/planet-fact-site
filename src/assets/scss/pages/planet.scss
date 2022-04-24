@@ -6,8 +6,9 @@
         margin-top: rem(155);
     }
     @include breakpoint-up('large') {
-        margin-top: rem(70);
+        margin-top: rem(100);
     }
+
     .d-grid--planet {
         gap: rem(16);
         margin-bottom: rem(28);
@@ -15,7 +16,7 @@
             grid-template-columns: repeat(12, 1fr);
             max-width: 1110px;
             margin-inline: auto;
-            margin-top: rem(100);
+            margin-top: rem(150);
         }
         @include breakpoint-up('large') {
             margin-bottom: rem(85);
@@ -30,6 +31,7 @@
                 grid-row: 2 / 3;
                 border-bottom: none;
                 align-self: center;
+                
             }
             @include breakpoint-up('large') {
                 grid-column: 9 / 13;
@@ -39,6 +41,7 @@
                     flex-direction: column;
                     color: hsl(var(--clr-white));
                     gap: rem(16);
+                    padding-inline: rem(0);
                 }
                 .btn {
                     flex: 1;
@@ -133,7 +136,7 @@
         .planet__details {
             text-align: center;
             @include breakpoint-up('medium') {
-                padding-right: rem(0);
+                padding-inline: rem(0);
                 text-align: left;
                 grid-column: 1 / 7;
                 grid-row: 2 /3;
@@ -177,6 +180,7 @@
         flex-direction: column;
         @include breakpoint-up('medium') {
             flex-direction: row;
+            gap: rem(40);
         }     
         .planet__measure {
             border: 1px solid hsl(var(--clr-white) / .25);
@@ -188,6 +192,7 @@
             @include breakpoint-up('medium') {
                 flex-direction: column;
                 align-items: flex-start;
+                gap: rem(10);
             }
             
             .planet__measure--value {

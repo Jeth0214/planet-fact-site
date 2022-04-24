@@ -105,7 +105,7 @@
                         width: 100%;
                         background-color: var(--planet-theme, hsl(var(--clr-dark-gray)));
                         position: absolute;
-                        top: -1px;
+                        top: -2px;
                     }
                 }
                 .planet__indicator {
@@ -135,7 +135,7 @@
                     width: 100%;
                     background-color: var(--planet-theme, hsl(var(--clr-dark-gray)));
                     position: absolute;
-                    top: -1px;
+                    top: -2px;
                 }
             }
         }
